@@ -4,18 +4,17 @@ const express = require('express');
 const cors    = require('cors');
 const app     = express();
 
-//app.use(cors({
-  //  origin: process.env.FRONTEND_URL
-//}));
-//app.use(cors());
-app.use(cors({
+// Define las opciones de CORS UNA VEZ
+const corsOptions = {
   origin: "https://animaladas.netlify.app",
   credentials: true
-}));
+};
 
-app.options('*', cors());
+// Aplica CORS con las mismas opciones en ambos lugares
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));  // <-- AHORA USA LAS MISMAS OPCIONES
 
-app.get('/', (req,res) => {
+app.get('/', (req, res) => {
     res.send('Hola Mundo!!')
 });
 
