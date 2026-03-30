@@ -1,12 +1,10 @@
 require("dotenv").config();
-const Product = require('./models/Product');
-const User    = require('./models/User');
-const Article = require('./models/Article');
-const Post    = require('./models/Post');
 
 const express = require('express');
 const cors    = require('cors');
 const app     = express();
+
+const productRoutes = require('./routes/productRoutes');
 
 const corsOptions = {
   origin: "https://animaladas.netlify.app",
@@ -14,7 +12,10 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-// NO USES app.options('*', ...) - ya no funciona en Express 5
+app.use(express.json());
+
+//USAR RUTAS
+app.use('/api/products', productRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hola Mundo!!')
