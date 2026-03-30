@@ -3,7 +3,7 @@ const { subcategoriesByCategory } = require('../models/Product');
 
 const productController = {
     async getAll (req, res) {
-        try{
+        try {
             const products = await Product.find();
             res.json(products)
         } catch(error) {
@@ -12,7 +12,7 @@ const productController = {
         }
     },
     async getById (req, res) {
-        try{
+        try {
             const id      = req.params.id;
             const product = await Product.findById(id);
             if(!product) {
@@ -25,7 +25,7 @@ const productController = {
         }
     },
     async create (req, res) {
-        try{
+        try {
             const { category, subcategory } = req.body;
 
             if(!subcategoriesByCategory[category]) {

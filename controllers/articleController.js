@@ -2,7 +2,7 @@ const Article = require('../models/Article');
 
 const articleController = {
     async getAll (req, res) {
-        try{
+        try {
             const articles = await Article.find();
             res.json(articles)
         } catch(error) {
@@ -11,7 +11,7 @@ const articleController = {
         }
     },
     async getById (req, res) {
-        try{
+        try {
             const id      = req.params.id;
             const article = await Article.findById(id);
             if(!article) {
