@@ -45,6 +45,25 @@ const productController = {
     async update (req, res) {
         try {
             const id = req.params.id;
+            const { category, subcategory } = req.body;
+
+            if(category || subcategory) {
+                const existingProduct = await Product.findById(id);
+                if(!existingProduct) {
+                    return res.status(404).json({ error: 'Producto no encontrado' });
+                }
+                
+                const finalCategory    = category || existingProduct.category;
+                const finalSubcategory = subcategory || existingProduct.subcategory;
+
+                if(!subcategoriesByCategory[finalCategory]) {
+                    return res.status(400).json({ error: 'Categoria no valida' });
+                }
+                if(!subcategoriesByCategory[finalCategory].includes(finalSubcategory)) {
+                    return res.status(400).json({ error: `La subcategoria "${finalSubcategory}" no es valida para la categoria "${finalCategory}"` });
+                }
+            }
+            
             const product = await Product.findByIdAndUpdate(id, req.body, { new: true });
             if(!product) {
                 return res.status(404).json({ error: 'Producto no encontrado' });
