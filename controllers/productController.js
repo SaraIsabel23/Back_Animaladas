@@ -13,7 +13,7 @@ const productController = {
     },
     async getById (req, res) {
         try{
-            const id = req.params.id;
+            const id      = req.params.id;
             const product = await Product.findById(id);
             if(!product) {
                 return res.status(404).json({ error: 'Producto no encontrado' });              
@@ -63,7 +63,7 @@ const productController = {
                     return res.status(400).json({ error: `La subcategoria "${finalSubcategory}" no es valida para la categoria "${finalCategory}"` });
                 }
             }
-            
+
             const product = await Product.findByIdAndUpdate(id, req.body, { new: true });
             if(!product) {
                 return res.status(404).json({ error: 'Producto no encontrado' });
