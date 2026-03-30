@@ -1,4 +1,8 @@
 require("dotenv").config();
+const Product = require('./models/Product');
+const User    = require('./models/User');
+const Article = require('./models/Article');
+const Post    = require('./models/Post');
 
 const express = require('express');
 const cors    = require('cors');
