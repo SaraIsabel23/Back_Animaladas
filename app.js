@@ -7,6 +7,7 @@ const app     = express();
 const productRoutes = require('./routes/productRoutes');
 const articleRoutes = require('./routes/articleRoutes');
 const postRoutes    = require('./routes/postRoutes');
+const authRoutes    = require('./routes/authRoutes');
 
 const corsOptions = {
   origin: "https://animaladas.netlify.app",
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use('/api/products', productRoutes);
 app.use('/api/articles', articleRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
     res.send('Hola Mundo!!')
