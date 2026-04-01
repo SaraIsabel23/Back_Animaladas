@@ -15,6 +15,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.use(express.static('public'));
 app.use(express.json());
 
 //USAR RUTAS

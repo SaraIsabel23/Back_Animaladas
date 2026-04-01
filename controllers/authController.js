@@ -25,8 +25,15 @@ const authController = {
                 password: hashedPassword
             });
 
+            const token = jwt.sign(
+                { id: user._id, role: user.role },
+                process.env.JWT_SECRET,
+                { expiresIn: '7d' }
+            );
+
             res.status(201).json({
                 message: 'Usuario registrado correctamente',
+                token,
                 user: {
                     id:       user.id,
                     name:     user.name,
