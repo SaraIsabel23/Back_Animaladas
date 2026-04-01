@@ -12,7 +12,7 @@ router.get("/type/:type", postController.getByType);
 router.get("/:id", postController.getById);
 
 //RUTAS PROTEGIDAS
-router.post("/", authMiddleware, adminMiddleware, postController.create);
+router.post("/", authMiddleware, postController.create);
 
 router.put("/:id", authMiddleware, adminMiddleware, postController.update);
 
