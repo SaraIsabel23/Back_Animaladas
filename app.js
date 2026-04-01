@@ -11,6 +11,8 @@ const authRoutes    = require('./routes/authRoutes');
 
 const corsOptions = {
   origin: "https://animaladas.netlify.app",
+  origin: "http://localhost:5174",
+  origin: "http://localhost:5173",
   credentials: true
 };
 
