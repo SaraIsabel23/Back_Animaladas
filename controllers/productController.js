@@ -64,7 +64,7 @@ const productController = {
                 }
             }
 
-            const product = await Product.findByIdAndUpdate(id, req.body, { new: true });
+            const product = await Product.findByIdAndUpdate(id, req.body, { returnDocument: 'after' });
             if(!product) {
                 return res.status(404).json({ error: 'Producto no encontrado' });
             }

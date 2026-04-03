@@ -48,7 +48,7 @@ const postController = {
     async update (req, res) {
         try {
             const id   = req.params.id;
-            const post = await Post.findByIdAndUpdate(id, req.body, { new:true });
+            const post = await Post.findByIdAndUpdate(id, req.body, { returnDocument: 'after' });
             if(!post) {
                 return res.status(404).json({ error: 'Post no encontrado' });
             }

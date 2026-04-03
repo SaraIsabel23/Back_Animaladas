@@ -35,7 +35,7 @@ const articleController = {
     async update (req, res) {
         try {
             const id      = req.params.id;
-            const article = await Article.findByIdAndUpdate(id, req.body, { new: true });
+            const article = await Article.findByIdAndUpdate(id, req.body, { returnDocument: 'after' });
             if(!article) {
                 return res.status(404).json({ error: 'Articulo no encontrado' });
             }
