@@ -10,12 +10,13 @@ const postRoutes    = require('./routes/postRoutes');
 const authRoutes    = require('./routes/authRoutes');
 const uploadRoutes  = require('./routes/uploadRoutes');
 
-const corsOptions = {
+/*const corsOptions = {
   origin: ['https://animaladas.netlify.app', 'http://localhost:5174', 'http://localhost:5173', 'http://http://localhost:5175/'],
   credentials: true
-};
+};*/
+app.use(cors());
 
-app.use(cors(corsOptions));
+/*app.use(cors(corsOptions));*/
 app.use(express.static('public'));
 app.use(express.json());
 
