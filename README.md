@@ -43,7 +43,7 @@ CLOUDINARY_API_SECRET=tu_api_secret
 
 
 ### Estructura del proyecto
-
+```html
 Back_Animaladas/
 --src/
     -- config/
@@ -74,7 +74,7 @@ Back_Animaladas/
 -- app.js
 -- index.js
 -- package.json
-
+```
 
 
 ### Endpoints
