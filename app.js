@@ -27,7 +27,6 @@ app.use('/api/posts', postRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/upload', uploadRoutes);
 
-
 app.get('/', (req, res) => {
     res.send('Hola Mundo!!')
 });
