@@ -11,7 +11,7 @@ const authRoutes    = require('./routes/authRoutes');
 const uploadRoutes  = require('./routes/uploadRoutes');
 
 const corsOptions = {
-  origin: ['https://animaladas.netlify.app', 'http://localhost:5174', 'http://localhost:5173'],
+  origin: ['https://animaladas.netlify.app', 'http://localhost:5174', 'http://localhost:5173', 'http://http://localhost:5175/'],
   credentials: true
 };
 
