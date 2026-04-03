@@ -1,4 +1,4 @@
-# Back_Animaladas - Projecto final
+# Back_Animaladas - Proyecto final
 
 API REST para la tienda de mascotas Animaladas, desarrollada con Node.js, Express y MongoDB.
 
@@ -45,36 +45,36 @@ CLOUDINARY_API_SECRET=tu_api_secret
 ### Estructura del proyecto
 
 Back_Animaladas/
-├── src/
-│   ├── config/
-│   │   ├── cloudinary.js
-│   │   └── db.js
-│   ├── controllers/
-│   │   ├── articleController.js
-│   │   ├── authController.js
-│   │   ├── postController.js
-│   │   ├── productController.js
-│   │  
-│   ├── middlewares/
-│   │   ├── adminMiddleware.js
-│   │   └── authMiddleware.js
-|   |   └── uploadCloudinary.js
-│   ├── models/
-│   │   ├── Article.js
-│   │   ├── Post.js
-│   │   ├── Product.js
-│   │   └── User.js
-│   └── routes/
-│       ├── articleRoutes.js
-│       ├── authRoutes.js
-│       ├── postRoutes.js
-│       ├── productRoutes.js
-│       └── uploadRoutes.js
-├── .env.example
-├── .gitignore
-├──  app.js
-└── index.js
-└── package.json
+--src/
+    -- config/
+       -- cloudinary.js
+       -- db.js
+    -- controllers/
+       -- articleController.js
+       -- authController.js
+       -- postController.js
+       -- productController.js
+    -- middlewares/
+       -- adminMiddleware.js
+       -- authMiddleware.js
+       -- uploadCloudinary.js
+    -- models/
+       -- Article.js
+       -- Post.js
+       -- Product.js
+       -- User.js
+    -- routes/
+       -- articleRoutes.js
+       -- authRoutes.js
+       -- postRoutes.js
+       -- productRoutes.js
+       -- uploadRoutes.js
+-- .env.example
+-- .gitignore
+-- app.js
+-- index.js
+-- package.json
+
 
 
 ### Endpoints
