@@ -2,6 +2,8 @@ require("dotenv").config();
 
 const express = require('express');
 const cors    = require('cors');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDoc = require('./docs');
 const app     = express();
 
 const productRoutes = require('./routes/productRoutes');
@@ -15,10 +17,10 @@ const uploadRoutes  = require('./routes/uploadRoutes');
   credentials: true
 };*/
 app.use(cors());
-
-/*app.use(cors(corsOptions));*/
 app.use(express.static('public'));
 app.use(express.json());
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 //USAR RUTAS
 app.use('/api/products', productRoutes);
@@ -28,7 +30,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/upload', uploadRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hola Mundo!!')
+    res.send('Hola Mundo!! Documentacion en /api-docs')
 });
 
 module.exports = app;

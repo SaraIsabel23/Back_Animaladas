@@ -7,7 +7,7 @@ API REST para la tienda de mascotas Animaladas, desarrollada con Node.js, Expres
 - **API:** https://back-animaladas-api.onrender.com/
 - **Frontend:** https://animaladas.netlify.app/
 
-### Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - Node.js
 - Express
@@ -20,7 +20,7 @@ API REST para la tienda de mascotas Animaladas, desarrollada con Node.js, Expres
 - Bcrypt (encriptación de contraseñas)
 
 
-### Instalación
+## Instalación
 
 1. Clonar el repositorio:
    git clone https://github.com/SaraIsabel23/Back_Animaladas.git
@@ -42,7 +42,7 @@ CLOUDINARY_API_SECRET=tu_api_secret
    npm start
 
 
-### Estructura del proyecto
+## Estructura del proyecto
 ```html
 Back_Animaladas/
 ├── src/
@@ -53,11 +53,19 @@ Back_Animaladas/
 │   │   ├── articleController.js
 │   │   ├── authController.js
 │   │   ├── postController.js
-│   │   ├── productController.js
-│   │  
+│   │   └── productController.js
+│   ├── docs/
+│   │   ├── articles.js
+│   │   ├── auth.js
+│   │   ├── basicInfo.js
+│   │   ├── components.js
+│   │   ├── index.js
+│   │   ├── posts.js
+│   │   ├── products.js
+|   |   └── upload.js
 │   ├── middlewares/
 │   │   ├── adminMiddleware.js
-│   │   └── authMiddleware.js
+│   │   ├──  authMiddleware.js
 |   |   └── uploadCloudinary.js
 │   ├── models/
 │   │   ├── Article.js
@@ -73,13 +81,13 @@ Back_Animaladas/
 ├── .env.example
 ├── .gitignore
 ├── app.js
-└── index.js
+├── index.js
 └── package.json
 
 ```
 
 
-### Endpoints
+## Endpoints
 
 AUTENTICACION
 
@@ -129,7 +137,7 @@ SUBIDA DE IMÁGENES
 | POST      | /api/upload   | Subir imágen a Cloudinary  | Usuario       |
 
 
-### Modelos
+## Modelos
 
 User
 ```js
@@ -176,14 +184,14 @@ Post
   createdAt: Date
 }
 ```
-#### Autenticación
+## Autenticación
 
 La API usa JWT (JSON Web Tokens) para la autenticacion. Incluye el token en el header:
-```html
+```bash
 Authorization: Bearer <token>
 ```
 
-#### Autora
+## Autora
 
 Sara Isabel del Sastre Ortega
 Desarrollado como proyecto del bootcamp The Bridge.
