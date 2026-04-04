@@ -7,7 +7,7 @@ API REST para la tienda de mascotas Animaladas, desarrollada con Node.js, Expres
 - **API:** https://back-animaladas-api.onrender.com/
 - **Frontend:** https://animaladas.netlify.app/
 
-## Tecnologias utilizadas
+## Tecnologías utilizadas
 
 - Node.js
 - Express
@@ -89,7 +89,7 @@ Back_Animaladas/
 
 ## Endpoints
 
-AUTENTICACION
+AUTENTICACIÓN
 
 | Metodo  | Ruta                 | Descripcion         | Autenticación |
 |-------- |----------------------|---------------------|---------------|
@@ -184,6 +184,15 @@ Post
   createdAt: Date
 }
 ```
+
+## Documentación Swagger
+
+Acceso en : 
+```html
+`https://back-animaladas-api.onrender.com/api-docs`
+```
+
+
 ## Autenticación
 
 La API usa JWT (JSON Web Tokens) para la autenticacion. Incluye el token en el header:

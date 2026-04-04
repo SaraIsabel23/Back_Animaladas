@@ -26,7 +26,7 @@ const productSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model('Product', productSchema);
-module.exports.validCategory    = validCategory;
+module.exports.validCategory           = validCategory;
 module.exports.subcategoriesByCategory = subcategoriesByCategory;
 
 

@@ -1,6 +1,6 @@
 const express = require('express');
-const router = express.Router();
-const upload = require('../middlewares/uploadCloudinary');
+const router  = express.Router();
+const upload  = require('../middlewares/uploadCloudinary');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 router.post('/', authMiddleware, upload.single('image'), (req, res) => {
