@@ -202,5 +202,6 @@ Authorization: Bearer <token>
 
 ## Autora
 
-Sara Isabel del Sastre Ortega
+Sara Isabel del Sastre Ortega.
+
 Desarrollado como proyecto del bootcamp The Bridge.
